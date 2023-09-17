@@ -1,4 +1,4 @@
-SELECT c.login, COUNT(o."inDelivery") AS "accepted orders"
+SELECT c.login, COUNT(o.track) 
 FROM "Couriers" AS c
 JOIN "Orders" AS o ON c.id = o."courierId"
 WHERE o."inDelivery" = true
